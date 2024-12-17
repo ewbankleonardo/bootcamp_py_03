@@ -56,9 +56,45 @@ Você está analisando logs de uma aplicação e precisa filtrar mensagens com s
 Dado um registro de log em formato de dicionário como 
 log = {'timestamp': '2021-06-23 10:00:00', 'level': 'ERROR', 'message': 'Falha na conexão'}, 
 escreva um programa que imprima a mensagem se a severidade for 'ERROR'.
-'''
+
 
 log = {'timestamp': '2021-06-23 10:00:00', 'level': 'ERROR', 'message': 'Falha na conexão'}
 
 if log['level']=="ERROR":
     print(f"{log['message']}")
+
+'''
+
+'''
+Exercício 4: Validação de Dados de Entrada
+Antes de processar os dados de usuários em um sistema de recomendação, 
+você precisa garantir que cada usuário tenha idade entre 18 e 65 anos e tenha fornecido um email válido. 
+Escreva um programa que valide essas condições e imprima "Dados de usuário válidos" ou o erro específico encontrado.
+
+'''
+
+'''
+nome = input("Digite o seu nome: ")
+idade = int(input("Digite sua idade:"))
+email = input("Digite seu email: ")
+ 
+if (idade in range(18,66) and "@" in email and "." in email):
+    print("Valido")
+else:
+     print("invalido")
+
+'''
+'''
+Exercício 5: Detecção de Anomalias em Dados de Transações
+Você está trabalhando em um sistema de detecção de fraude e precisa identificar transações suspeitas. 
+Uma transação é considerada suspeita se o valor for superior a R$ 10.000 ou se ocorrer fora do horário comercial 
+(antes das 9h ou depois das 18h). 
+Dada uma transação como transacao = {'valor': 12000, 'hora': 20}, verifique se ela é suspeita.
+
+transacao = {'valor': 18000, 'hora': 14}
+
+if (transacao["valor"] >= 10000 or 9<=transacao["hora"]>18):
+     print("Operação Suspeita")
+else:
+     print("Operação valida")
+'''
